@@ -9,7 +9,7 @@ USER root
 
 # gnupg needed for curl, zip for nbzip
 RUN apt-get update && \
-    apt-get install -y apt-utils gnupg curl zip unixodbc-dev && \
+    apt-get install -y apt-utils gnupg curl zip unixodbc unixodbc-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # install Microsoft ODBC for SQL Server 17
