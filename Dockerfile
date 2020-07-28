@@ -3,7 +3,7 @@
 ARG BASE_CONTAINER=jupyter/scipy-notebook
 FROM $BASE_CONTAINER
 
-LABEL maintainer="Jupyter SciPy-PyODBC Project <fracking.analysis@gmail.com>"
+LABEL maintainer="Jupyter SciPy-PyODBC-PsycoPG2 Project <david.darling@khepry.org>"
 
 USER root
 
