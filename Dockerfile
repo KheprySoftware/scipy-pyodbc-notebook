@@ -9,7 +9,7 @@ USER root
 
 # gnupg needed for curl, zip for nbzip
 RUN apt-get update && \
-    apt-get install -y apt-utils gnupg curl zip unixodbc unixodbc-dev && \
+    apt-get install -y apt-utils gnupg curl wget zip unixodbc unixodbc-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # install Microsoft ODBC for SQL Server 17
@@ -24,6 +24,7 @@ USER $NB_UID
 RUN conda install --quiet --yes \
     'psycopg2' \
     'pyodbc' \
+    'cmake' \
     && \
     conda clean --all -f -y && \
     # Activate ipywidgets extension in the environment that runs the notebook server
